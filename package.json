@@ -1,0 +1,36 @@
+{
+  "name": "practice-backend-2026",
+  "version": "1.0.0",
+  "description": "API для системы бронирования игровых мест в компьютерном клубе. Позволяет геймерам выбирать мощные ПК, а админам — управлять парком машин.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiriill22/practice-backend-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiriill22/practice-backend-2026/issues"
+  },
+  "homepage": "https://github.com/kiriill22/practice-backend-2026#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^6.3.1",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^6.3.1"
+  }
+}

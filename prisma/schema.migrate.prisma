@@ -1,0 +1,35 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/cyberclub_db"
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  username     String    @unique
+  passwordHash String
+  role         String    @default("player")
+  bookings     Booking[]
+}
+
+model Computer {
+  id       Int       @id @default(autoincrement())
+  name     String
+  specs    String
+  zone     String
+  bookings Booking[]
+}
+
+model Booking {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  computer    Computer @relation(fields: [computerId], references: [id])
+  computerId  Int
+  startTime   DateTime
+  endTime     DateTime
+}
